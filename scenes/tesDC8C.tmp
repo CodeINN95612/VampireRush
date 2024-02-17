@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=3 uid="uid://b3vvqc4s4ncus"]
+
+[ext_resource type="Script" path="res://scripts/scenes/test_bed.gd" id="1_5rfml"]
+[ext_resource type="PackedScene" uid="uid://drw7u4djt8qgr" path="res://scenes/player_vampire.tscn" id="1_6uapt"]
+[ext_resource type="PackedScene" uid="uid://bx0rtlcxulgum" path="res://scenes/menus/pause_menu.tscn" id="2_50wwl"]
+[ext_resource type="Texture2D" uid="uid://cajmycwlxl06w" path="res://icon.svg" id="2_dcigx"]
+
+[node name="test_bed" type="Node2D"]
+script = ExtResource("1_5rfml")
+
+[node name="Icon" type="Sprite2D" parent="."]
+position = Vector2(-183, -67)
+texture = ExtResource("2_dcigx")
+
+[node name="Icon2" type="Sprite2D" parent="."]
+position = Vector2(-75, 152)
+scale = Vector2(0.789063, 1.85156)
+texture = ExtResource("2_dcigx")
+
+[node name="Icon3" type="Sprite2D" parent="."]
+position = Vector2(201.5, 89)
+scale = Vector2(0.648438, 1)
+texture = ExtResource("2_dcigx")
+
+[node name="Icon4" type="Sprite2D" parent="."]
+position = Vector2(128.227, -98)
+scale = Vector2(0.395142, 0.6875)
+texture = ExtResource("2_dcigx")
+
+[node name="player_vampire" parent="." instance=ExtResource("1_6uapt")]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="PauseMenu" parent="CanvasLayer" instance=ExtResource("2_50wwl")]
+visible = false
