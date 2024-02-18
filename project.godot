@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="VampireRush"
-run/main_scene="res://scenes/test_bed.tscn"
+run/main_scene="res://scenes/menus/main_menu.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -23,6 +23,7 @@ Global="*res://scripts/global.gd"
 
 window/size/mode=3
 window/size/resizable=false
+window/size/borderless=true
 
 [input]
 

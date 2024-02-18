@@ -6,7 +6,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7ovjq"]
 size = Vector2(13, 16)
 
-[node name="player_vampire" type="CharacterBody2D"]
+[node name="PlayerVampire" type="CharacterBody2D"]
 position = Vector2(6, 8)
 script = ExtResource("1_o1nur")
 

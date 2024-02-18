@@ -1,4 +1,5 @@
 extends CharacterBody2D
+class_name PlayerVampire
 
 #directions
 const UP := Rect2(0, 0, 16, 16);
