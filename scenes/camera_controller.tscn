@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://c54utk3kw56ur"]
+
+[ext_resource type="Script" path="res://scripts/camera/camera_controller.gd" id="1_hu7xl"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_vshgd"]
+
+[node name="CameraController" type="CharacterBody2D"]
+script = ExtResource("1_hu7xl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_vshgd")
+disabled = true
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(0, 3.8147e-06)
+zoom = Vector2(2, 2)
