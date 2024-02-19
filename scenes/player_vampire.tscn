@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://drw7u4djt8qgr"]
 
-[ext_resource type="Script" path="res://scripts/player_vampire.gd" id="1_o1nur"]
+[ext_resource type="Script" path="res://scripts/entities/player_vampire.gd" id="1_745jn"]
 [ext_resource type="Texture2D" uid="uid://clfwbe7gvlg7f" path="res://assets/vampire/vampires-idle.png" id="2_l8lic"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7ovjq"]
@@ -8,7 +8,7 @@ size = Vector2(13, 16)
 
 [node name="PlayerVampire" type="CharacterBody2D"]
 position = Vector2(6, 8)
-script = ExtResource("1_o1nur")
+script = ExtResource("1_745jn")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0.5, 0)

@@ -13,13 +13,11 @@ const UP_LEFT := Rect2(112, 0, 16, 16);
 
 @export var speed = 100
 @export var acceleration = 5;
-@export var threshold: float = 35;
+@export var threshold_slow: float = 40;
+@export var threshold_stop: float = 20;
 
-var tile_atlas: Sprite2D;
+@onready var tile_atlas := $Sprite2D;
 var direction := Vector2.ZERO;
-
-func _ready():
-	tile_atlas = $Sprite2D;
 
 func _physics_process(delta):
 	player_move(delta)
@@ -29,8 +27,10 @@ func player_move(delta):
 	var mouse_pos = get_global_mouse_position()
 	direction = (mouse_pos - position).normalized()
 	
-	if position.distance_to(mouse_pos) > threshold:
+	if position.distance_to(mouse_pos) > threshold_stop:
 		velocity = velocity.lerp(direction * speed * acceleration, delta * acceleration)
+	elif position.distance_to(mouse_pos) > threshold_slow:
+		velocity = velocity.lerp(direction * speed, delta * acceleration * acceleration)
 	else:
 		velocity = velocity.lerp(Vector2.ZERO, delta * acceleration)
 	
