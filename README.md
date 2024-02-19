@@ -1,2 +1,3 @@
 # VampireRush
-2D vampire game made in Godot game engine.
+
+2D vampires game made in Godot game engine.
